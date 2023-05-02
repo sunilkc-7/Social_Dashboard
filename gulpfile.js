@@ -57,7 +57,12 @@ function watchTask() {
         series(scssTask, jsTask, browserSyncReload)
     );
 }
+function build(cb) {
+    // body omitted
+    cb();
+  }
+  
 
 //Default Gulp Task
 exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
-
+exports.build = build;
